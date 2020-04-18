@@ -1,0 +1,14 @@
+<button class="btn btn-primary my-4" (click)="activarPrimero()">Primero</button>
+<button class="btn btn-danger mx-4 my-4" (click)="activarSegundo()">Sgundo</button>
+<p class="bg-info d-none" [ngClass]="{'d-block':activo=='primero'}">Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. Perspiciatis veritatis commodi distinctio nobis dicta cum culpa eligendi fuga. Doloribus minus
+    sequi eum odit veniam asperiores et quis reprehenderit ducimus eos!</p>
+
+<p class="bg-warning d-none" [ngClass]="{'d-block':activo=='segundo'}">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Adipisci, sunt. Repellendus harum porro dolorum error quia! Aut sit culpa consequuntur quam et
+    expedita iste aliquam ullam odio veritatis, optio dolores.</p>
+
+<ul>
+    <li *ngFor="let curso of cursos; let i=index">{{i+1}} - {{curso}}</li>
+</ul>
+

@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Nostros</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut culpa eos ea omnis labore beatae quibusdam,
+        aspernatur inventore ullam quasi tempore unde consequuntur itaque ab commodi. Provident nobis maiores
+        cupiditate.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let miembro of equipo; let i=index">
+            <h6>Nombre: {{miembro.nombre}}</h6>
+            <h6>Apellido: {{miembro.apellido}}</h6>
+            <h6>Edad: {{miembro.edad}}</h6>
+            <a [routerLink]="['/descripcion',i]">Mas info...</a>          
+        </li>
+      
+    </ul>    
+
+</div>

@@ -1,0 +1,13 @@
+<div class="container my-5 text-left">
+    <h6>Agregar tarea:</h6>
+    <form (ngSubmit)="agregar()">       
+        <input type="text" placeholder="Nombre de la tarea" name="name" 
+       [(ngModel)]="tarea.name"
+        class="form-control my-1">
+        <input type="text" placeholder="Descripcion de la tarea" name="descripcion" 
+        [(ngModel)]="tarea.descripcion"
+        class="form-control">
+        <button type="submit" class="btn btn-success my-1">Agregar</button>
+    </form>
+</div>
+

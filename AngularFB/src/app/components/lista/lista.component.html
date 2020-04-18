@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <div class="alert alert-primary text-left text-dark" *ngFor="let tarea of tareas; let i=index" role="alert">
+        {{tarea.name}}: {{tarea.descripcion}}
+        
+        <div class="float-right" (click)="eliminar(tarea)">            
+            <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="float-right mx-2" (click)="activarEditar(tarea)"> 
+            <i class="fas fa-pencil-alt"></i>           
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-left" *ngIf="editarActive==true">
+    <h6>Editar tarea:</h6>
+    <form (ngSubmit)="editar(tareaToUpdate)">       
+        <input type="text"    name="name" 
+       [(ngModel)]="tareaToUpdate.name"
+        class="form-control my-1">
+        <input type="text"  name="descripcion" 
+        [(ngModel)]="tareaToUpdate.descripcion"
+        class="form-control">
+        <button type="submit" class="btn btn-success my-1">Editar</button>
+    </form>
+</div>

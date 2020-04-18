@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularholamundo": {
+      "hosting": {
+        "AngularFB": [
+          "angularholamundo"
+        ]
+      }
+    }
+  }
+}
